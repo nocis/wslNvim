@@ -42,7 +42,7 @@ return {
         [".config"] = { glyph = "󱁿", hl = "MiniIconsCyan" },
         routes = { glyph = "", hl = "MiniIconsBlue" },
         middlewares = { glyph = "󰲂", hl = "MiniIconsGreen" },
-        components = { glyph = "󰲃", hl = "MiniIconsGreen" },
+        components = { glyph = "󰲂", hl = "MiniIconsGreen" },
         hooks = { glyph = "󰉗", hl = "MiniIconsAzure" },
         app = { glyph = "󱂵", hl = "MiniIconsGreen" },
         src = { glyph = "󰴉", hl = "MiniIconsPurple" },
