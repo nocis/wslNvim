@@ -24,6 +24,7 @@ return {
               return curIcon
             end
             local rawIcon = require("neo-tree.sources.common.components").icon(config, node, state)
+            rawIcon.text = "└ " .. rawIcon.text
             return rawIcon
           end,
         },
