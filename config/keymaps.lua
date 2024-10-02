@@ -24,6 +24,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
+keymap.set("x", "p", "P")
+keymap.set("x", "P", "p")
 
 -- keymap.set("n", "<C-m>", "<C-i>", opts)
 vim.keymap.set("n", "<leader>j", function()
