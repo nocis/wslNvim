@@ -16,6 +16,9 @@ return {
         },
         opts = { skip = true },
       })
+      opts.lsp.signature = {
+        auto_open = { enabled = false },
+      } 
       -- local focused = true
       -- vim.api.nvim_create_autocmd("FocusGained", {
       -- 	callback = function()
