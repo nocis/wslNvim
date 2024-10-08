@@ -93,10 +93,7 @@ return {
         { "<leader>p", group = "Pop up" },
         {
           "<leader>pc",
-          function()
-            local core = require("ccc.core").new()
-            core:pick()
-          end,
+          vim.cmd.CccPick,
           mode = { "n", "x" },
           desc = "Color Picker",
         },
