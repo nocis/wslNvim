@@ -1,6 +1,32 @@
 return {
   -- colorize
-
+  {
+    "nocis/ccc.nvim",
+    event = { "BufReadPost", "InsertEnter", "VeryLazy" },
+    config = function()
+      vim.opt.termguicolors = true
+      local ccc = require("ccc")
+      require("ccc").setup({
+        -- Your preferred settings
+        -- Example: enable highlighter
+        highlighter = {
+          auto_enable = true,
+          lsp = true,
+        },
+        inputs = {
+          ccc.input.oklch,
+          ccc.input.rgb,
+          ccc.input.hsl,
+        },
+        outputs = {
+          ccc.output.css_lch,
+          ccc.output.hex,
+          ccc.output.css_rgb,
+          ccc.output.css_hsl,
+        },
+      })
+    end,
+  },
   {
     "NvChad/nvim-colorizer.lua",
     event = { "BufReadPost", "InsertEnter", "VeryLazy" },
@@ -58,5 +84,43 @@ return {
         "glsl",
       })
     end,
+  },
+  {
+    "folke/which-key.nvim",
+    optional = true,
+    opts = {
+      spec = {
+        { "<leader>p", group = "Pop up" },
+        {
+          "<leader>pc",
+          function()
+            local core = require("ccc.core").new()
+            core:pick()
+          end,
+          mode = { "n", "x" },
+          desc = "Color Picker",
+        },
+        {
+          "<leader>pn",
+          function()
+            require("nabla").popup()
+          end,
+          mode = { "n" },
+          desc = "nabla popup",
+        },
+        {
+          "<leader>py",
+          function()
+            if LazyVim.pick.picker.name == "telescope" then
+              require("telescope").extensions.yank_history.yank_history({})
+            else
+              vim.cmd([[YankyRingHistory]])
+            end
+          end,
+          mode = { "n", "x" },
+          desc = "Open Yank History",
+        },
+      },
+    },
   },
 }
