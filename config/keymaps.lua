@@ -55,11 +55,11 @@ vim.keymap.set("n", "<leader>i", function()
 end, { desc = "Toggle Diagnostics" })
 
 -- nabla
-keymap.set("n", "<leader>p", function()
-  require("nabla").popup()
-end, {
-  desc = "nabla popup",
-})
+-- keymap.set("n", "<leader>p", function()
+--   require("nabla").popup()
+-- end, {
+--   desc = "nabla popup",
+-- })
 
 -- clang type hierarchy
 vim.keymap.set("n", "<leader>ct", function()
