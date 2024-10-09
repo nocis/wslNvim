@@ -1,5 +1,6 @@
 # wslNvim
 
+# x11 does not support Electron gpu, so run it on windows please!
 # fix dbus error(chrome,hyper) when on wsl2
 # also need to install upower
 connectX11Bus(){
