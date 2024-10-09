@@ -7,6 +7,20 @@ return {
         graphql = {},
         cssls = {
           filetypes = { "css", "scss", "less" },
+          settings = {
+            css = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+            scss = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
         },
         html = {
           init_options = {
