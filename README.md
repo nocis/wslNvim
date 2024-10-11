@@ -23,7 +23,7 @@ dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile -
 
 # keymapping
 crtl <-> cap
-win <-> fn
+win <-> apps/menu
 esc->:
 
 cap+[ -> esc
