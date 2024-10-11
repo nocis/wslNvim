@@ -1,5 +1,8 @@
 # wslNvim
 
+# winterm conmand_prompts not working
+make sure open with the C:\Windows\system32\wsl.exe -d Ubuntu instead of ubuntu.exe
+
 # x11 does not support Electron gpu, so run it on windows please!
 # fix dbus error(chrome,hyper) when on wsl2
 # also need to install upower
