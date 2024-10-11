@@ -4,6 +4,13 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+keymap.set("i", "<C-k>", "<Up>", { noremap = true, desc = "up" })
+keymap.set("i", "<C-j>", "<Down>", { desc = "down" })
+keymap.set("i", "<C-h>", "<Left>", { desc = "left" })
+keymap.set("i", "<C-l>", "<Right>", { desc = "right" })
+keymap.set("i", "jk", "<Esc>")
+keymap.set("i", "<C-M-k>", vim.lsp.buf.signature_help, { desc = "Signature Help" })
+
 keymap.set("n", "vv", "<C-v>", opts)
 -- keymap.set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 -- keymap.set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
