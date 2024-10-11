@@ -21,6 +21,8 @@ dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile -
 # keymapping
 crtl <-> cap
 win <-> fn
+esc->:
 
 cap+[ -> esc
 win+dir -> dir
+
