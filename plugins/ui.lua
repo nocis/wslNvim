@@ -16,6 +16,20 @@ return {
         },
         opts = { skip = true },
       })
+      table.insert(opts.routes, {
+        filter = {
+          event = "notify",
+          find = "snippet parsing failed",
+        },
+        opts = { skip = true },
+      })
+      table.insert(opts.routes, {
+        filter = {
+          event = "notify",
+          find = " Error detected while processing TextChanged",
+        },
+        opts = { skip = true },
+      })
       opts.lsp.signature = {
         auto_open = { enabled = false },
       } 
