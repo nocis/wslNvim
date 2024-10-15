@@ -19,7 +19,7 @@ return {
           ccc.input.hsl,
         },
         outputs = {
-          ccc.output.css_lch,
+          ccc.output.css_oklch,
           ccc.output.hex,
           ccc.output.css_rgb,
           ccc.output.css_hsl,
