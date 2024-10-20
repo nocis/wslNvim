@@ -18,7 +18,7 @@ return {
       })
       table.insert(opts.routes, {
         filter = {
-          event = "notify",
+          event = "msg_show",
           find = "snippet parsing failed",
         },
         opts = { skip = true },
