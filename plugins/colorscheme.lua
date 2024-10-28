@@ -29,7 +29,7 @@ return {
         fg = "#777777",
       }
       highlights.MatchParen = {
-        bg = "#e19b5e",
+        bg = "#00d4ef",
         fg = "#140000",
       }
     end,
