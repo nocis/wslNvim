@@ -1,4 +1,10 @@
+# wsl port exposure
+1. add port to firewall inbound rule( enable other machine access via ip:port )
+2. listening the port and forwarding to wsl ip:port (netsh interface portproxy)
+   ie. netsh interface portproxy add v4tov4 listenport=8001 listenaddress=192.168.0.10 connectport=80 connectaddress=192.168.0.10
+
 # wslNvim
+
 
 # winterm conmand_prompts not working
 make sure open with the C:\Windows\system32\wsl.exe -d Ubuntu instead of ubuntu.exe
