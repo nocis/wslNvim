@@ -14,6 +14,7 @@ return {
       servers = {
         cssmodules_ls = {},
         graphql = {},
+        somesass_ls = {},
         cssls = {
           filetypes = { "css", "scss", "less" },
           settings = {
