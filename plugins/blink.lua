@@ -12,16 +12,16 @@ return {
         }, direction_priority = {} }
       opts.completion.menu.direction_priority = { "n", "s" }
 
-      opts.completion.trigger = opts.completion.trigger or {}
-      opts.completion.trigger.show_on_blocked_trigger_characters = {}
+      -- opts.completion.trigger = opts.completion.trigger or {}
+      -- opts.completion.trigger.show_on_blocked_trigger_characters = {}
 
       -- add newline, tab and space to LSP source
-      opts.sources.providers.lsp = opts.sources.providers.lsp or { override = {} }
-      opts.sources.providers.lsp.override.get_trigger_characters = function(self)
-        local trigger_characters = self:get_trigger_characters()
-        vim.list_extend(trigger_characters, { "\n", "\t", " " })
-        return trigger_characters
-      end
+      -- opts.sources.providers.lsp = opts.sources.providers.lsp or { override = {} }
+      -- opts.sources.providers.lsp.override.get_trigger_characters = function(self)
+      --   local trigger_characters = self:get_trigger_characters()
+      --   vim.list_extend(trigger_characters, { "\n", "\t", " " })
+      --   return trigger_characters
+      -- end
     end,
   },
 }
