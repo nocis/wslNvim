@@ -9,3 +9,7 @@ vim.opt.relativenumber = false
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.laststatus = 2 -- always: show for every window
 vim.opt.completeopt = "menu,menuone,preview,noinsert,noselect"
+
+vim.o.expandtab = true -- "Use softtabstop spaces instead of tab characters for indentation
+vim.o.shiftwidth = 4 -- "Indent by 4 spaces when using >>, <<, == etc.
+vim.o.softtabstop = 4 -- "Indent by 4 spaces when pressing <TAB>
