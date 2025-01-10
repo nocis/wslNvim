@@ -52,15 +52,15 @@ return {
         vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
       end)
 
-      LazyVim.toggle.map("<leader>ug", {
-        name = "Indention Guides",
-        get = function()
-          return require("ibl.config").get_config(0).enabled
-        end,
-        set = function(state)
-          require("ibl").setup_buffer(0, { enabled = state })
-        end,
-      })
+      --LazyVim.toggle.map("<leader>ug", {
+       -- name = "Indention Guides",
+        --get = function()
+         -- return require("ibl.config").get_config(0).enabled
+        --end,
+        --set = function(state)
+         -- require("ibl").setup_buffer(0, { enabled = state })
+        --end,
+      --})
 
       vim.g.rainbow_delimiters = { highlight = highlight }
       require("ibl.hooks").register(
