@@ -13,3 +13,12 @@ vim.opt.completeopt = "menu,menuone,preview,noinsert,noselect"
 vim.o.expandtab = true -- "Use softtabstop spaces instead of tab characters for indentation
 vim.o.shiftwidth = 4 -- "Indent by 4 spaces when using >>, <<, == etc.
 vim.o.softtabstop = 4 -- "Indent by 4 spaces when pressing <TAB>
+
+vim.filetype.add({
+  filename = {
+    ["docker-compose.yml"] = "yaml.docker-compose",
+    ["docker-compose.yaml"] = "yaml.docker-compose",
+    ["compose.yml"] = "yaml.docker-compose",
+    ["compose.yaml"] = "yaml.docker-compose",
+  },
+})
