@@ -2,6 +2,14 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+-- disable c-a c-x after plugin
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  group = vim.api.nvim_create_augroup("LazyKeymaps", { clear = true }),
+  pattern = "*",
+  command = "map <C-a> gg<S-v>G",
+  desc = "remap c-a to select all",
+})
+
 -- Treat .ejs files as .html
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.ejs",
