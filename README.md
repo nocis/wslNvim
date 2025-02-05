@@ -6,7 +6,7 @@
 # wslNvim
 
 
-# winterm conmand_prompts not working
+# winterm command_prompts not working (for reopen terms in prev session)
 make sure open with the C:\Windows\system32\wsl.exe -d Ubuntu instead of ubuntu.exe
 
 # x11 does not support Electron gpu, so run it on windows please!
