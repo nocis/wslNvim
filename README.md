@@ -27,12 +27,4 @@ dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile -
 # Hyper use ~/.config/Hyper/hyper.json to config
 
 
-# keymapping
-cap -> ctrl
-win -> cap
-ctrl -> ctrl+alt
-
-esc -> :
-cap+[ -> esc
-win+dir -> dir
 
