@@ -5,6 +5,7 @@
 
 # wslNvim
 
+# config nerd font in windows and winterm!!!
 
 # winterm command_prompts not working (for reopen terms in prev session)
 make sure open with the C:\Windows\system32\wsl.exe -d Ubuntu instead of ubuntu.exe
