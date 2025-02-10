@@ -3,6 +3,8 @@
 2. listening the port and forwarding to wsl ip:port (netsh interface portproxy)
    ie. netsh interface portproxy add v4tov4 listenport=8001 listenaddress=192.168.0.10 connectport=80 connectaddress=192.168.0.10
 
+3. connectaddress to wsl need to use ip inside wsl(ip addr)
+
 # wslNvim
 
 # config nerd font in windows and winterm!!!
