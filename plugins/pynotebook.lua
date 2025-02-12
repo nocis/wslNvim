@@ -1,67 +1,10 @@
-return {
-  {
-    "nocis/jupytext.nvim",
-    -- enabled = false,
-    lazy = false,
-    opts = {
-      style = "markdown",
-      output_extension = "md",
-      force_ft = "markdown",
-    },
-  },
-  { "nocis/otter.nvim", ft = { "markdown", "quarto", "norg" } },
-  {
-    "nocis/quarto-nvim",
-    dependencies = {
-      "nvim-lspconfig",
-      "otter.nvim",
-    },
-    ft = { "quarto", "markdown", "norg" },
-    config = function()
-      local quarto = require("quarto")
-      quarto.setup({
-        lspFeatures = {
-          languages = { "python", "rust", "lua" },
-          chunks = "all", -- 'curly' or 'all'
-          diagnostics = {
-            enabled = true,
-            triggers = { "BufWritePost" },
-          },
-          completion = {
-            enabled = true,
-          },
-        },
-        codeRunner = {
-          enabled = true,
-          default_method = "molten",
-        },
-      })
-    end,
-    keys = {
-      {
-        "<leader>mp",
-        function()
-          require("quarto").quartoPreview()
-        end,
-        desc = "Preview the Quarto document",
-      },
-    },
-  },
-  {
-    "nocis/molten-nvim",
-    build = ":UpdateRemotePlugins",
-    init = function()
-      vim.g.molten_auto_open_output = false
-      vim.g.molten_image_location = "virt"
-      vim.g.molten_output_win_border = { "", "━", "", "" }
-      vim.g.molten_output_win_max_height = 12
       vim.g.molten_virt_text_output = true
       vim.g.molten_use_border_highlights = true
       vim.g.molten_virt_lines_off_by_1 = true
       vim.g.molten_wrap_output = true
       vim.g.molten_tick_rate = 142
       vim.g.molten_image_provider = "none"
-      vim.g.molten_auto_image_popup = true
+      vim.g.molten_auto_image_popup = false
 
       local runner = require("quarto.runner")
       vim.keymap.set("n", "<leader>mr", runner.run_cell, { desc = "run cell", silent = true })
@@ -69,6 +12,14 @@ return {
       vim.keymap.set("n", "<leader>mA", runner.run_all, { desc = "run all cells", silent = true })
       vim.keymap.set("n", "<leader>ml", runner.run_line, { desc = "run line", silent = true })
       vim.keymap.set("v", "<leader>mv", runner.run_range, { desc = "run visual range", silent = true })
+      vim.keymap.set(
+        "n",
+        "<leader>mo",
+        ":noautocmd MoltenEnterOutput<CR>",
+        { desc = "open output window", silent = true }
+      )
+      vim.keymap.set("n", "<leader>mp", ":MoltenImagePopup<CR>", { silent = true, desc = "open image popup" })
+      vim.keymap.set("n", "<leader>mc", ":MoltenInterrupt<CR>", { silent = true, desc = "interrupt/cancel cell" })
 
       local default_notebook = [[
   {
