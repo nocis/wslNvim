@@ -1,3 +1,93 @@
+return {
+  {
+    "nocis/jupytext.nvim",
+    -- enabled = false,
+    lazy = false,
+    opts = {
+      style = "markdown",
+      output_extension = "md",
+      force_ft = "markdown",
+    },
+  },
+  { "nocis/otter.nvim", ft = { "markdown", "quarto", "norg" } },
+  {
+    "nocis/quarto-nvim",
+    dependencies = {
+      "nvim-lspconfig",
+      "otter.nvim",
+    },
+    ft = { "quarto", "markdown", "norg" },
+    config = function()
+      local quarto = require("quarto")
+      quarto.setup({
+        lspFeatures = {
+          languages = { "python", "rust", "lua" },
+          chunks = "all", -- 'curly' or 'all'
+          diagnostics = {
+            enabled = true,
+            triggers = { "BufWritePost" },
+          },
+          completion = {
+            enabled = true,
+          },
+        },
+        codeRunner = {
+          enabled = true,
+          default_method = "molten",
+        },
+      })
+    end,
+    keys = {
+      {
+        "<leader>mp",
+        function()
+          require("quarto").quartoPreview()
+        end,
+        desc = "Preview the Quarto document",
+      },
+    },
+  },
+  -- {
+  --   -- see the image.nvim readme for more information about configuring this plugin
+  --   "nocis/image.nvim",
+  --   opts = {
+  --     backend = "sixel", -- whatever backend you would like to use
+  --     integrations = {
+  --       markdown = {
+  --         enabled = true,
+  --         clear_in_insert_mode = false,
+  --         download_remote_images = true,
+  --         only_render_image_at_cursor = false,
+  --         filetypes = { "markdown", "quarto" }, -- markdown extensions (ie. quarto) can go here
+  --       },
+  --       neorg = {
+  --         enabled = true,
+  --         clear_in_insert_mode = false,
+  --         download_remote_images = true,
+  --         only_render_image_at_cursor = false,
+  --         filetypes = { "norg" },
+  --       },
+  --     },
+  --     max_width = 100,
+  --     max_height = 8,
+  --     max_height_window_percentage = math.huge,
+  --     max_width_window_percentage = math.huge,
+  --     window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
+  --     editor_only_render_when_focused = false, -- auto show/hide images when the editor gains/looses focus
+  --     window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "fidget", "" },
+  --   },
+  -- },
+  -- sudo apt install libmagickwand-dev for magick
+  -- sudo apt install libsixel-bin      for sixel BE but this still bad
+  {
+    "nocis/molten-nvim",
+    -- dependencies = { "nocis/image.nvim" },
+    build = ":UpdateRemotePlugins",
+    init = function()
+      vim.g.molten_auto_open_output = false
+      vim.g.molten_image_location = "both"
+      vim.g.molten_output_win_border = { "", "━", "", "" }
+      vim.g.molten_output_win_max_height = 12
       vim.g.molten_virt_text_output = true
       vim.g.molten_use_border_highlights = true
       vim.g.molten_virt_lines_off_by_1 = true
