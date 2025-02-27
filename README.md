@@ -30,4 +30,5 @@ dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile -
 # Hyper use ~/.config/Hyper/hyper.json to config
 
 
-
+# clone site
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent
