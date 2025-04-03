@@ -6,6 +6,7 @@ eval "$(starship init bash)"
 
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/hyper/"
+export PATH="$PATH:/opt/magick/"
 
 PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
 # PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "%s" "$PWD"'
@@ -27,3 +28,8 @@ connectX11Bus() {
   export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
   dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile --syslog-only &
 }
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+. "$HOME/.cargo/env"
