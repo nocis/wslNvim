@@ -103,3 +103,10 @@ Configuring Docker
 17. docker run
 docker run -it -p 8888:8888 -u 1000:1000 -v $(pwd):/tf/notebooks --gpus all tensorflow/tensorflow:latest-jupyter bash
 jupyter server (--allow-root, for docker without -u) --ip 0.0.0.0 --port 8888
+
+18. molten
+source ~/.virtualenvs/neovim/bin/activate
+pip install requests websocket websocket-client
+deactivate
+
+:MoltenInit http://localhost:8888?token=xx
