@@ -63,7 +63,12 @@ systemctl --user enable symlink-wayland-socket.service
 npm install -g tree-sitter-cli
 
 
-12. pynotebook
+12. chrome
+Change directories into the temp folder: cd /tmp
+Use wget to download it: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+Install the package: sudo apt install --fix-missing ./google-chrome-stable_current_amd64.deb
+
+13. pynotebook
 create neovim python env
 python -m venv ~/.virtualenvs/neovim
 source ~/.virtualenvs/neovim/bin/activate
