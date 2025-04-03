@@ -72,7 +72,7 @@ Install the package: sudo apt install --fix-missing ./google-chrome-stable_curre
 create neovim python env
 python -m venv ~/.virtualenvs/neovim
 source ~/.virtualenvs/neovim/bin/activate
-pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip quarto-cli jupytext
+pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip quarto-cli 
 
 install kernel for project:
 python -m venv project_name
@@ -104,9 +104,17 @@ Configuring Docker
 docker run -it -p 8888:8888 -u 1000:1000 -v $(pwd):/tf/notebooks --gpus all tensorflow/tensorflow:latest-jupyter bash
 jupyter server (--allow-root, for docker without -u) --ip 0.0.0.0 --port 8888
 
-18. molten
+18. host dev env
+python -m [dockerMatchedEnv]
+source [dockerMatchedEnv]/bin/activate
+pip install jupytext ...(tensorflow,numpy,...)
+deactivate
+
+20. molten
 source ~/.virtualenvs/neovim/bin/activate
 pip install requests websocket websocket-client
 deactivate
 
 :MoltenInit http://localhost:8888?token=xx
+
+
