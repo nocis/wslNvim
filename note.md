@@ -99,3 +99,7 @@ integrate docker into wsl2
 make sure driver on win, coda tookit on wsl, are installed
 install NVIDIA Container Toolkit
 Configuring Docker
+
+17. docker run
+docker run -it -p 8888:8888 -u 1000:1000 -v $(pwd):/tf/notebooks --gpus all tensorflow/tensorflow:latest-jupyter bash
+jupyter server (--allow-root, for docker without -u) --ip 0.0.0.0 --port 8888
