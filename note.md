@@ -38,7 +38,7 @@ starship
 
 
 9. deps
-sudo apt install build-essential libfuse2 unzip ripgrep fd-find wl-clipboard
+sudo apt install build-essential libfuse2 libasound2t64 unzip ripgrep fd-find wl-clipboard
 
 10. wayland wsl socket:
 
