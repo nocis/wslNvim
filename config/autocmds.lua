@@ -9,7 +9,6 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
   command = "map <C-a> gg<S-v>G",
   desc = "remap c-a to select all",
 })
--- map works, nn and nmap not working!!!
 
 -- Treat .ejs files as .html
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
