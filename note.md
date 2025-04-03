@@ -80,3 +80,9 @@ source project_name/bin/activate
 pip install ipykernel
 python -m ipykernel install --user --name project_name
 MoltenInit project_name # start the kernel
+
+14. cuda
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt update
+sudo apt install cuda-toolkit
