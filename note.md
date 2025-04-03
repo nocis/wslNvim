@@ -94,3 +94,8 @@ sudo apt-get -y install cuda-toolkit-12-8
 download docker desktop
 enable wsl2 backend
 integrate docker into wsl2
+
+16. NVIDIA  Container Toolkit(use gpu inside docker container)
+make sure driver on win, coda tookit on wsl, are installed
+install NVIDIA Container Toolkit
+Configuring Docker
