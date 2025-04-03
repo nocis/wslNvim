@@ -40,4 +40,22 @@ starship
 9. deps
 sudo apt install build-essential libfuse2 unzip ripgrep fd-find wl-clipboard
 
+10. wayland wsl socket:
+
+❯ cat ~/.config/systemd/user/symlink-wayland-socket.service
+[Unit]
+Description=Symlink Wayland socket to XDG_RUNTIME_DIR
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ln -s /mnt/wslg/runtime-dir/wayland-0      $XDG_RUNTIME_DIR
+ExecStart=/usr/bin/ln -s /mnt/wslg/runtime-dir/wayland-0.lock $XDG_RUNTIME_DIR
+
+[Install]
+WantedBy=default.target
+
+
+Enable it using the following command.
+systemctl --user enable symlink-wayland-socket.service
+
 
