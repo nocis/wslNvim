@@ -38,7 +38,7 @@ starship
 
 
 9. deps
-sudo apt install build-essential libfuse2 unzip ripgrep fd-find wl-clipboard
+sudo apt install build-essential libfuse2 libasound2t64 unzip ripgrep fd-find wl-clipboard
 
 10. wayland wsl socket:
 
@@ -61,3 +61,41 @@ systemctl --user enable symlink-wayland-socket.service
 
 11. treesitter cli
 npm install -g tree-sitter-cli
+
+
+12. chrome
+Change directories into the temp folder: cd /tmp
+Use wget to download it: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+Install the package: sudo apt install --fix-missing ./google-chrome-stable_current_amd64.deb
+
+13. pynotebook
+create neovim python env
+python -m venv ~/.virtualenvs/neovim
+source ~/.virtualenvs/neovim/bin/activate
+pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+
+install kernel for project:
+python -m venv project_name
+source project_name/bin/activate 
+pip install ipykernel
+python -m ipykernel install --user --name project_name
+MoltenInit project_name # start the kernel
+
+14. WSL-Ubuntu CUDA toolkit 
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.8.1/local_installers/cuda-repo-wsl-ubuntu-12-8-local_12.8.1-1_amd64.deb
+sudo dpkg -i cuda-repo-wsl-ubuntu-12-8-local_12.8.1-1_amd64.deb
+sudo cp /var/cuda-repo-wsl-ubuntu-12-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-8
+
+15. integrate desktop docker into wsl2
+download docker desktop
+enable wsl2 backend
+integrate docker into wsl2
+
+16. NVIDIA  Container Toolkit(use gpu inside docker container)
+make sure driver on win, coda tookit on wsl, are installed
+install NVIDIA Container Toolkit
+Configuring Docker
