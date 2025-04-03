@@ -89,3 +89,8 @@ sudo dpkg -i cuda-repo-wsl-ubuntu-12-8-local_12.8.1-1_amd64.deb
 sudo cp /var/cuda-repo-wsl-ubuntu-12-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-8
+
+15. integrate desktop docker into wsl2
+download docker desktop
+enable wsl2 backend
+integrate docker into wsl2
