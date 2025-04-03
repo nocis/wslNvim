@@ -19,12 +19,19 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 fonts: 0XProto mono
 add a new ubuntu profile, set starting dir: ~
 
-5. apps and configs
+5. envs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+nvm install xx
+
+curl -fsSL https://pyenv.run | bash
+pyenv install xx
+
+7. apps and configs
 nvim
 hyper
 starship
 
-6. deps
-sudo apt install build-essential libfuse2
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+8. deps
+sudo apt install build-essential libfuse2 unzip 
+
 
