@@ -72,7 +72,7 @@ Install the package: sudo apt install --fix-missing ./google-chrome-stable_curre
 create neovim python env
 python -m venv ~/.virtualenvs/neovim
 source ~/.virtualenvs/neovim/bin/activate
-pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip quarto-cli jupytext
 
 install kernel for project:
 python -m venv project_name
