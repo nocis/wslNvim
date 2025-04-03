@@ -59,3 +59,5 @@ Enable it using the following command.
 systemctl --user enable symlink-wayland-socket.service
 
 
+11. treesitter cli
+npm install tree-sitter-cli
