@@ -24,3 +24,7 @@ nvim
 hyper
 starship
 
+6. deps
+sudo apt install build-essential libfuse2
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+
