@@ -104,9 +104,14 @@ Configuring Docker
 docker run -it -p 8888:8888 -u 1000:1000 -v $(pwd):/tf/notebooks --gpus all tensorflow/tensorflow:latest-jupyter bash
 jupyter server (--allow-root, for docker without -u) --ip 0.0.0.0 --port 8888
 
+
 18. host dev env
-python -m [dockerMatchedEnv]
+pyenv install [dockerpyver]
+pyenv local [dockerpyver]
+
+pyenv exec python -m venv [dockerMatchedEnv]
 source [dockerMatchedEnv]/bin/activate
+
 pip install jupytext ...(tensorflow,numpy,...)
 deactivate
 
