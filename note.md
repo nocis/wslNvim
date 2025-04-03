@@ -38,6 +38,6 @@ starship
 
 
 9. deps
-sudo apt install build-essential libfuse2 unzip ripgrep fd-find
+sudo apt install build-essential libfuse2 unzip ripgrep fd-find wl-clipboard
 
 
