@@ -16,5 +16,7 @@ git config --global user.email "youremail@domain.com"
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 4. winterm
+fonts: 0XProto mono
+add a new ubuntu profile, set starting dir: ~
 
 5. 
