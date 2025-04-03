@@ -61,3 +61,17 @@ systemctl --user enable symlink-wayland-socket.service
 
 11. treesitter cli
 npm install -g tree-sitter-cli
+
+
+12. pynotebook
+create neovim python env
+python -m venv ~/.virtualenvs/neovim
+source ~/.virtualenvs/neovim/bin/activate
+pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+
+install kernel for project:
+python -m venv project_name
+source project_name/bin/activate 
+pip install ipykernel
+python -m ipykernel install --user --name project_name
+MoltenInit project_name # start the kernel
