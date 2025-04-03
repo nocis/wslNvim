@@ -19,4 +19,8 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 fonts: 0XProto mono
 add a new ubuntu profile, set starting dir: ~
 
-5. 
+5. apps and configs
+nvim
+hyper
+starship
+
