@@ -13,7 +13,7 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "0xProto nerd font Mono",
   "terminal.integrated.fontLigatures.enabled": true,
   "workbench.colorTheme": "Tokyo Night Gogh",
   "glassit.alpha": 240
