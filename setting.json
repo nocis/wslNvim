@@ -1,0 +1,30 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.fontFamily": "0xProto nerd font Mono",
+  "editor.fontLigatures": true,
+  "zenMode.showTabs": "single",
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.wslDistribution": "Ubuntu",
+  "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontLigatures.enabled": true
+
+  // gd — go to the definition;
+  // ctrl + o — get back from the definition;
+  // space + d — show the hover with details on the item where the
+  //             cursor currently is (from our custom vscode_keymaps.lua);
+  // shift + k — if the hover isn’t shown, it shows it.
+  //             If the hover is already shown, it focuses on it,
+  //             and then you can use vim motions
+  //             like j, k, gg, G to scroll through it;
+  // space + a — show the quick fix list (from our custom vscode_keymaps.lua).
+  //             You can also use ctrl + n and ctrl + p to move through
+  //             the list and hit enter to choose the action to perform.
+}
