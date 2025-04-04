@@ -1,7 +1,7 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.fontFamily": "1xProto nerd font Mono",
+  "editor.fontFamily": "0xProto nerd font Mono",
   "editor.fontLigatures": true,
 
   "zenMode.centerLayout": false,
@@ -14,12 +14,12 @@
   // <f12>: fullscreen
 
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 2
+    "asvetliakov.vscode-neovim": 1
   },
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontLigatures.enabled": true,
   "workbench.colorTheme": "Tokyo Night Gogh",
-  "glassit.alpha": 241,
+  "glassit.alpha": 240,
 
   "vscode-neovim.useWSL": true,
   "vscode-neovim.wslDistribution": "Ubuntu",
