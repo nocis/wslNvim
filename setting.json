@@ -19,7 +19,7 @@
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontLigatures.enabled": true,
   "workbench.colorTheme": "Tokyo Night Gogh",
-  "glassit.alpha": 240,
+  "glassit.alpha": 238,
 
   "vscode-neovim.useWSL": true,
   "vscode-neovim.wslDistribution": "Ubuntu",
