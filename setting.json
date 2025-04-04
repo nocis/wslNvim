@@ -11,7 +11,7 @@
 
   // <c-p>:focus on vscode
   // <c-k><z>:zen mode
-  // <f12>: fullscreen
+  // <f11>: fullscreen
 
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -67,4 +67,3 @@
   //             You can also use ctrl + n and ctrl + p to move through
   //             the list and hit enter to choose the action to perform.
 }
-
