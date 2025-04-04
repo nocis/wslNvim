@@ -4,7 +4,7 @@
   "editor.fontFamily": "0xProto nerd font Mono",
   "editor.fontLigatures": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.selectionMode": "never",
 
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
