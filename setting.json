@@ -14,7 +14,9 @@
     "asvetliakov.vscode-neovim": 1
   },
   "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.fontLigatures.enabled": true
+  "terminal.integrated.fontLigatures.enabled": true,
+  "workbench.colorTheme": "Tokyo Night Gogh",
+  "glassit.alpha": 240
 
   // gd — go to the definition;
   // ctrl + o — get back from the definition;
@@ -28,3 +30,4 @@
   //             You can also use ctrl + n and ctrl + p to move through
   //             the list and hit enter to choose the action to perform.
 }
+
