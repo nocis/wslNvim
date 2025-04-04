@@ -4,9 +4,18 @@ return {
     -- enabled = false,
     lazy = false,
     opts = {
-      style = "markdown",
-      output_extension = "md",
-      force_ft = "markdown",
+      custom_language_formatting = {
+        python = {
+          extension = "qmd",
+          style = "quarto",
+          force_ft = "quarto",
+        },
+        -- r = {
+        --   extension = "qmd",
+        --   style = "quarto",
+        --   force_ft = "quarto",
+        -- },
+      },
     },
   },
   { "nocis/otter.nvim", ft = { "markdown", "quarto", "norg" } },
@@ -145,7 +154,7 @@ return {
 ]]
 
       local function new_notebook(filename)
-        local path = filename .. ".ipynb"
+        local path = vim.fn.expand("%:p:h") .. "/" .. filename .. ".ipynb"
         local file = io.open(path, "w")
         if file then
           file:write(default_notebook)
