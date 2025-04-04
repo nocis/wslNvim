@@ -3,6 +3,8 @@
   "editor.formatOnSave": true,
   "editor.fontFamily": "0xProto nerd font Mono",
   "editor.fontLigatures": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
 
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
@@ -53,6 +55,7 @@
     "k",
     "l"
   ]
+
   // To spawn multiple cursors from visual line/block modes type ma/mA or mi/mI
 
   // gd — go to the definition;
@@ -67,3 +70,4 @@
   //             You can also use ctrl + n and ctrl + p to move through
   //             the list and hit enter to choose the action to perform.
 }
+
