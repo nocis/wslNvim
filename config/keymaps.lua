@@ -26,8 +26,8 @@ keymap.set("n", "vv", "<C-v>", opts)
 -- inc-rename
 keymap.set("n", "<leader>cr", ":IncRename ")
 
--- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- Select all bad idea
+-- keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
