@@ -3,20 +3,51 @@
   "editor.formatOnSave": true,
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
-  "editor.fontFamily": "0xProto nerd font Mono",
+  "editor.fontFamily": "1xProto nerd font Mono",
   "editor.fontLigatures": true,
   "zenMode.showTabs": "single",
-  "vscode-neovim.useWSL": true,
-  "vscode-neovim.wslDistribution": "Ubuntu",
-  "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 2
   },
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontLigatures.enabled": true,
   "workbench.colorTheme": "Tokyo Night Gogh",
-  "glassit.alpha": 240
+  "glassit.alpha": 241,
+
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.wslDistribution": "Ubuntu",
+  "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      // Use lua to execute any logic
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    }
+  },
+  "vscode-neovim.ctrlKeysForInsertMode": [
+    "a",
+    "c",
+    "d",
+    "h",
+    "j",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "w",
+    "k",
+    "l"
+  ]
+  // To spawn multiple cursors from visual line/block modes type ma/mA or mi/mI
 
   // gd — go to the definition;
   // ctrl + o — get back from the definition;
