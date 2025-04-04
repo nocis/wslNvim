@@ -3,13 +3,14 @@
 -- Add any additional autocmds here
 
 -- disable c-a c-x after plugin
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  group = vim.api.nvim_create_augroup("LazyKeymaps", { clear = true }),
-  pattern = "*",
-  command = "map <C-a> gg<S-v>G",
-  desc = "remap c-a to select all",
-})
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+--   group = vim.api.nvim_create_augroup("LazyKeymaps", { clear = true }),
+--   pattern = "*",
+--   command = "map <C-a> gg<S-v>G",
+--   desc = "remap c-a to select all",
+-- })
 -- map works, nn and nmap not working!!!
+-- really bad idea!!! conflicts bad!!
 
 -- Treat .ejs files as .html
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
