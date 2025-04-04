@@ -1,11 +1,17 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false,
   "editor.fontFamily": "1xProto nerd font Mono",
   "editor.fontLigatures": true,
+
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.fullScreen": false,
   "zenMode.showTabs": "single",
+
+  // <c-p>:focus on vscode
+  // <c-k><z>:zen mode
+  // <f12>: fullscreen
 
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 2
