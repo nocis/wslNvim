@@ -53,7 +53,9 @@
     "u",
     "w",
     "k",
-    "l"
+    "l",
+    "n",
+    "p"
   ]
 
   // To spawn multiple cursors from visual line/block modes type ma/mA or mi/mI
