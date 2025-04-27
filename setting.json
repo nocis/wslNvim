@@ -83,5 +83,9 @@
   //             Copy extension.list to the machine B
   //             In the Visual Studio Code PowerShell terminal:
   //             cat extensions.list |% { code --install-extension $_}
+
+  // 3. md workflow：
+  //             preview: ctrl+shift+v
+  //             switch: ctrl+1/2
 }
 
