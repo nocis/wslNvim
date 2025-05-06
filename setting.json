@@ -6,6 +6,8 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.suggest.selectionMode": "never",
 
+  "window.newWindowDimensions": "inherit",
+  
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.fullScreen": false,
@@ -87,5 +89,8 @@
   // 3. md workflow：
   //             preview: ctrl+shift+v
   //             switch: ctrl+1/2
+  //             rotate panel: ctrl+q
+  //             rotate file: <leader><leader>
+  //             close file: ctrl+w, q
 }
 
