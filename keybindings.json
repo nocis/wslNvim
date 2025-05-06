@@ -48,6 +48,14 @@
     "key": "a",
     "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
     "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
-  }
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "notebook.execute"
+  },
+  {
+    "key": "shift+enter",
+    "command": "notebook.cell.executeCellsAbove"
+  
 ]
 
