@@ -26,6 +26,8 @@
   "glassit.alpha": 238,
 
   "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
