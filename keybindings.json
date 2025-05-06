@@ -56,6 +56,6 @@
   {
     "key": "shift+enter",
     "command": "notebook.cell.executeCellsAbove"
-  
+  }
 ]
 
