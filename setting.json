@@ -25,6 +25,12 @@
   "workbench.colorTheme": "Tokyo Night Gogh",
   "glassit.alpha": 238,
 
+  "notebook.formatOnSave.enabled": true,
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
   "vscode-neovim.useWSL": true,
   "vscode-neovim.wslDistribution": "Ubuntu",
   "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
