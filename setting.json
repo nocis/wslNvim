@@ -117,7 +117,11 @@
   //             In the Visual Studio Code PowerShell terminal:
   //             cat extensions.list |% { code --install-extension $_}
 
-  // 3. md workflow：
+  // 3. virtual desktop：
+  //             nav: Ctrl+Win+left/right
+  //             modify: Win+tab
+
+  // 4. md workflow：
   //             preview: ctrl+shift+v
   //             switch: ctrl+1/2
   //             rotate panel: ctrl+q
