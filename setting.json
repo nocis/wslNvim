@@ -134,6 +134,7 @@
   //             switch: ctrl+1/2
   //             rotate panel: ctrl+q
   //             rotate file: <leader><leader>
+  //             rotate tabs: ctrl+tab
   //             close file: ctrl+w, q
 }
 
