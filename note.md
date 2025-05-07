@@ -124,4 +124,6 @@ deactivate
 
 :MoltenInit http://localhost:8888?token=xx
 
-
+21. clangd + .hpp.in
+1. .hpp.in cmake configured defined macros will be installed by cmake under build folder
+2. include xxx.hpp.in as <xxx.hpp> auto resolved by clanged
