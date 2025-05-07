@@ -32,6 +32,7 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "ruff.configurationPreference": "filesystemFirst",
 
   "vscode-neovim.useWSL": true,
   "vscode-neovim.wslDistribution": "Ubuntu",
