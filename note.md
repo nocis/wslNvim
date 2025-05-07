@@ -28,7 +28,7 @@ curl -fsSL https://pyenv.run | bash
 sudo apt install build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
-xorg-dev cmake
+libgl1-mesa-dev libglu1-mesa-dev xorg-dev cmake
 
 pyenv install xx
 
