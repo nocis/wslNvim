@@ -5,6 +5,8 @@
   "editor.fontLigatures": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.suggest.selectionMode": "never",
+  "editor.suggest.preview": true,
+  "editor.minimap.enabled": false,
 
   "window.newWindowDimensions": "inherit",
   
