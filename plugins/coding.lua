@@ -118,6 +118,7 @@ return {
           desc = "Open Yank History",
         },
         { "<leader>K", nil },
+        { "<leader>L", nil },
         { "<leader><Tab><Tab>", nil },
         { "<leader><Tab>]", nil },
         { "<leader><Tab>[", nil },
