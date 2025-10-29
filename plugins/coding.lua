@@ -124,7 +124,6 @@ return {
         { "<leader><Tab>[", nil },
         { "<leader><Tab>f", nil },
         { "<leader><Tab>l", nil },
-        { "<leader><Tab>l", nil },
         { "<leader>-", nil },
         { "<leader>w-", nil },
         { "<leader>w|", nil },
