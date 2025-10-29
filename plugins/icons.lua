@@ -3,7 +3,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = false,
     dependencies = {
-      "echasnovski/mini.icons",
+      "nvim-mini/mini.icons",
     },
     opts = {
       filesystem = {
@@ -33,7 +33,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     lazy = true,
     opts = {
       file = {
