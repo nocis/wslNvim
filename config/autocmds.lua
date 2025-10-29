@@ -73,6 +73,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
   pattern = "html",
   callback = function()
+    if not vim.fs.root(0, "node_modules") then
+        return
+    end
     vim.lsp.start({
       name = "emmet-language-server-css",
       cmd = { vim.fs.root(0, "node_modules") .. "/node_modules/.bin/emmet-language-server", "--stdio" },
@@ -113,6 +116,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact",
   callback = function()
+    if not vim.fs.root(0, "node_modules") then
+        return
+    end
     vim.lsp.start({
       name = "emmet-language-server",
       cmd = { vim.fs.root(0, "node_modules") .. "/node_modules/.bin/emmet-language-server", "--stdio" },
