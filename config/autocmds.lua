@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 vim.api.nvim_create_autocmd({ "FileType" }, {
   -- pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact",
 
-  pattern = "html,astro",
+  pattern = "html",
   callback = function()
     if not vim.fs.root(0, "node_modules") then
         return
@@ -114,7 +114,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact,astro",
+  pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact",
   callback = function()
     if not vim.fs.root(0, "node_modules") then
         return
