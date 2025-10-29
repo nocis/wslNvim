@@ -10,3 +10,10 @@
 10. reboot
 11. reinstall docker desktop
 12. reboot
+
+old disk:
+1. diskpart
+2. select vdisk file="a\b\c.vhdx"
+3. compact vdisk
+4. detach vdisk
+5. delete data disk file
