@@ -55,7 +55,6 @@ return {
         },
         glsl_analyzer = {},
         -- glslls = {},
-        astro-language-server = {},
       },
     },
   },
