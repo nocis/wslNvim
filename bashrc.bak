@@ -33,3 +33,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 . "$HOME/.cargo/env"
+
+purgenvim(){
+  rm -rf ~/.local/state/nvim/ ~/.config/nvim/ ~/.local/share/nvim/  ~/.cache/nvim
+}
+
+confignvim(){
+  rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins
+  ln -s ~/.config/wslnvim/* ~/.config/nvim/lua/
+}
