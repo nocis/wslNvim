@@ -39,6 +39,7 @@ purgenvim(){
 }
 
 confignvim(){
-  rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins
+  rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins ~/.config/nvim/snippets
   ln -s ~/.config/wslNvim/{config,plugins} ~/.config/nvim/lua/
+  ln -s ~/.config/wslNvim/snippets ~/.config/nvim/
 }
