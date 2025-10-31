@@ -27,6 +27,10 @@ return {
 		opts = {
 			fuzzy = { implementation = "prefer_rust" },
 
+			snippets = {
+				preset = "luasnip",
+			},
+
 			completion = {
 				list = {
 					selection = {
