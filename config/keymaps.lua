@@ -4,6 +4,9 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+vim.keymap.set("i", "<C-m>", "<Nop>") -- Disables Enter
+vim.keymap.set("i", "<LF>", "<CR>") -- LF IS 10 = <C-CR>, FOR INSERT NEW LINE
+
 keymap.set("i", "<C-k>", "<Up>", { noremap = true, desc = "up" })
 keymap.set("i", "<C-j>", "<Down>", { desc = "down" })
 keymap.set("i", "<C-h>", "<Left>", { desc = "left" })
@@ -119,8 +122,24 @@ local function highlight_current_line()
 	})
 end
 
+-- Function to detect Caps Lock state
+function check_caps_lock_xset()
+	-- for wsl
+	local handle = io.popen('powershell.exe -Command "[console]::CapsLock"')
+
+	-- for linux
+	-- local handle = io.popen('xset q | grep "Caps Lock"')
+
+	local result = handle:read("*a")
+	handle:close()
+	return result:match("True") ~= nil
+
+	--for linux
+	-- return result:match("Caps Lock:%s+on") ~= nil
+end
+
 function toggle_capslock()
-	capslock_visual = not capslock_visual
+	capslock_visual = check_caps_lock_xset()
 
 	if capslock_visual then
 		-- Red background on current line
