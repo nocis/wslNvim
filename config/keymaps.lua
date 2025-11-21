@@ -120,22 +120,25 @@ local function highlight_current_line()
 end
 
 -- Function to detect Caps Lock state
-function check_caps_lock_xset()
+local function check_caps_lock_xset()
 	-- for wsl
-	local handle = io.popen('powershell.exe -Command "[console]::CapsLock"')
+	-- local handle = io.popen('powershell.exe -Command "[console]::CapsLock"')
 
 	-- for linux
 	-- local handle = io.popen('xset q | grep "Caps Lock"')
 
-	local result = handle:read("*a")
-	handle:close()
-	return result:match("True") ~= nil
+	-- local result = handle:read("*a")
+	-- handle:close()
+	-- return result:match("True") ~= nil
 
 	--for linux
 	-- return result:match("Caps Lock:%s+on") ~= nil
+
+	local result = vim.fn.system('powershell.exe -NoProfile -NonInteractive -Command "[console]::CapsLock"')
+	return result:match("True") ~= nil
 end
 
-function toggle_capslock()
+local function toggle_capslock()
 	capslock_visual = check_caps_lock_xset()
 
 	if capslock_visual then
