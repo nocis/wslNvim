@@ -36,7 +36,7 @@ keymap.set("x", "P", "p")
 
 -- keymap.set("n", "<C-m>", "<C-i>", opts)
 vim.keymap.set("n", "<leader>j", function()
-  require("whatthejump").browse_jumps()
+	require("whatthejump").browse_jumps()
 end, { desc = "show jumps" })
 
 -- Split window
@@ -45,20 +45,20 @@ keymap.set("n", "sv", ":split<Return>", opts)
 
 -- Diagnostics
 vim.keymap.set("n", "<leader>i", function()
-  -- If we find a floating window, close it.
-  local found_float = false
-  for _, win in ipairs(vim.api.nvim_list_wins()) do
-    if vim.api.nvim_win_get_config(win).relative ~= "" then
-      vim.api.nvim_win_close(win, true)
-      found_float = true
-    end
-  end
+	-- If we find a floating window, close it.
+	local found_float = false
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_config(win).relative ~= "" then
+			vim.api.nvim_win_close(win, true)
+			found_float = true
+		end
+	end
 
-  if found_float then
-    return
-  end
+	if found_float then
+		return
+	end
 
-  vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+	vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
 end, { desc = "Toggle Diagnostics" })
 
 -- nabla
@@ -70,5 +70,71 @@ end, { desc = "Toggle Diagnostics" })
 
 -- clang type hierarchy
 vim.keymap.set("n", "<leader>ct", function()
-  require("clangd_extensions.type_hierarchy").show_hierarchy()
+	require("clangd_extensions.type_hierarchy").show_hierarchy()
 end, { desc = "clang type hierarchy" })
+
+--
+--
+--
+--
+--
+--
+--
+-- visual notic when capslock on
+
+-- Create highlight group
+vim.api.nvim_set_hl(0, "CapsLockLine", { bg = "#ee365f", fg = "#ffffff", bold = true })
+vim.api.nvim_set_hl(0, "CapsLockCursor", {
+	bg = "#ff0000", -- Red background
+	fg = "#ffffff", -- White text
+	bold = true,
+})
+
+-- Toggle state
+local capslock_visual = false
+local oldCursor = vim.opt.guicursor
+local capslock_ns = vim.api.nvim_create_namespace("capslock_indicator")
+
+-- Function to toggle cursor might not enough catch eyes
+-- local function toggle_capslock_visual()
+-- 	capslock_visual = not capslock_visual
+-- 	if capslock_visual then
+-- 		vim.opt.guicursor = "n-v-c:block-CapsLockCursor,i-ci-ve:ver25-CapsLockCursor"
+-- 	else
+-- 		vim.opt.guicursor = oldCursor
+-- 	end
+-- end
+--
+
+local function highlight_current_line()
+	vim.api.nvim_buf_clear_namespace(0, capslock_ns, 0, -1)
+	local line = vim.fn.line(".") - 1
+	vim.api.nvim_buf_set_extmark(0, capslock_ns, line, 0, {
+		end_row = line + 1,
+		hl_group = "CapsLockLine",
+		hl_eol = true,
+	})
+end
+
+function toggle_capslock()
+	capslock_visual = not capslock_visual
+
+	if capslock_visual then
+		-- Red background on current line
+		highlight_current_line()
+		-- switch line along with cursor
+		vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+			group = vim.api.nvim_create_augroup("CapsLockHighlight", { clear = true }),
+			callback = highlight_current_line,
+		})
+	else
+		vim.api.nvim_clear_autocmds({ group = "CapsLockHighlight" })
+		vim.api.nvim_buf_clear_namespace(0, capslock_ns, 0, -1)
+	end
+end
+
+-- c-f12 = f36
+-- a-f12 = f60
+-- Send "!{F12}"     ; Alt+F12
+-- Send "^{F12}"     ; Ctrl+F12
+vim.keymap.set({ "n", "i", "v" }, "<F60><F36>", toggle_capslock)
