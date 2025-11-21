@@ -4,9 +4,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("i", "<C-m>", "<Nop>") -- Disables Enter
-vim.keymap.set("i", "<LF>", "<CR>") -- LF IS 10 = <C-CR>, FOR INSERT NEW LINE
-
 keymap.set("i", "<C-k>", "<Up>", { noremap = true, desc = "up" })
 keymap.set("i", "<C-j>", "<Down>", { desc = "down" })
 keymap.set("i", "<C-h>", "<Left>", { desc = "left" })

@@ -14,8 +14,8 @@ vim.o.expandtab = true -- "Use softtabstop spaces instead of tab characters for 
 vim.o.shiftwidth = 4 -- "Indent by 4 spaces when using >>, <<, == etc.
 vim.o.softtabstop = 4 -- "Indent by 4 spaces when pressing <TAB>
 
--- vim.opt.smartindent = false
--- vim.opt.autoindent = false
+vim.opt.smartindent = false
+vim.opt.autoindent = false
 
 vim.g.lazyvim_python_lsp = "basedpyright"
 
