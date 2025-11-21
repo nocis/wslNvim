@@ -43,6 +43,9 @@ end, { desc = "show jumps" })
 keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
 
+-- Ctrl+D = Backspace in insert mode
+keymap.set("i", "<C-d>", "<BS>", { desc = "Delete previous char" })
+
 -- Diagnostics
 vim.keymap.set("n", "<leader>i", function()
 	-- If we find a floating window, close it.
