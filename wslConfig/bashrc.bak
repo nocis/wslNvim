@@ -1,3 +1,9 @@
+# -------------------------------------
+#
+# User Config
+#
+# -------------------------------------
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
@@ -7,26 +13,29 @@ eval "$(starship init bash)"
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/hyper/"
 export PATH="$PATH:/opt/magick/"
+export PATH="$PATH:/opt/lazygit/"
+export PATH="$PATH:/opt/lazydocker/"
+export PATH="$PATH:/opt/yazi/"
 
 PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
 # PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "%s" "$PWD"'
 
 project() {
-  pjlist=$(find ~ -name '.*' -prune -name '.git' -printf "%h\n" | fzf --height=10%)
-  echo $pjlist
-  cd $pjlist
+    pjlist=$(find ~ -name '.*' -prune -name '.git' -printf "%h\n" | fzf --height=10%)
+    echo $pjlist
+    cd $pjlist
 }
 
 connectX11Bus() {
-  echo "enter the sudo password, please"
-  read -s PW
-  echo $PW | sudo -kS service dbus start >/dev/null 2>&1
-  export XDG_RUNTIME_DIR=/run/user/$(id -u)
-  echo $PW | sudo -kS mkdir -p $XDG_RUNTIME_USER >/dev/null 2>&1
-  echo $PW | sudo -kS chmod 700 $XDG_RUNTIME_DIR >/dev/null 2>&1
-  echo $PW | sudo -kS chown $(id -un):$(id -gn) $XDG_RUNTIME_DIR >/dev/null 2>&1
-  export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
-  dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile --syslog-only &
+    echo "enter the sudo password, please"
+    read -s PW
+    echo $PW | sudo -kS service dbus start >/dev/null 2>&1
+    export XDG_RUNTIME_DIR=/run/user/$(id -u)
+    echo $PW | sudo -kS mkdir -p $XDG_RUNTIME_USER >/dev/null 2>&1
+    echo $PW | sudo -kS chmod 700 $XDG_RUNTIME_DIR >/dev/null 2>&1
+    echo $PW | sudo -kS chown $(id -un):$(id -gn) $XDG_RUNTIME_DIR >/dev/null 2>&1
+    export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
+    dbus-daemon --session --address=$DBUS_SESSION_BUS_ADDRESS --nofork --nopidfile --syslog-only &
 }
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -34,12 +43,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - bash)"
 . "$HOME/.cargo/env"
 
-purgenvim(){
-  rm -rf ~/.local/state/nvim/ ~/.config/nvim/ ~/.local/share/nvim/  ~/.cache/nvim
+purgenvim() {
+    rm -rf ~/.local/state/nvim/ ~/.config/nvim/ ~/.local/share/nvim/ ~/.cache/nvim
 }
 
-confignvim(){
-  rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins ~/.config/nvim/snippets
-  ln -s ~/.config/wslNvim/{config,plugins} ~/.config/nvim/lua/
-  ln -s ~/.config/wslNvim/snippets ~/.config/nvim/
+confignvim() {
+    rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins ~/.config/nvim/snippets
+    ln -s ~/.config/wslNvim/{config,plugins} ~/.config/nvim/lua/
+    ln -s ~/.config/wslNvim/snippets ~/.config/nvim/
 }
