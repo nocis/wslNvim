@@ -28,12 +28,12 @@ keymap.set("n", "<leader>cr", ":IncRename ")
 
 -- Increment/decrement
 -- n: normal mode
-keymap.set("n", "<kPlus>", function()
-	require("dial.map").manipulate("increment", "normal")
-end)
-keymap.set("n", "<kMinus>", function()
-	require("dial.map").manipulate("decrement", "normal")
-end)
+-- keymap.set("n", "<kPlus>", function()
+-- 	require("dial.map").manipulate("increment", "normal")
+-- end)
+-- keymap.set("n", "<kMinus>", function()
+-- 	require("dial.map").manipulate("decrement", "normal")
+-- end)
 
 -- Select all bad idea
 -- keymap.set("n", "<C-a>", "gg<S-v>G")
