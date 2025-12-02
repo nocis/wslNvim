@@ -1,0 +1,9 @@
+# yazi.toml
+# export TERM=xterm-256color is required
+[mgr]
+show_hidden = true
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, desc = "Edit", for = "unix" },
+]
