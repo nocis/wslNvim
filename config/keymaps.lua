@@ -11,6 +11,7 @@ keymap.set("i", "<C-l>", "<Right>", { desc = "right" })
 keymap.set("i", "jk", "<Esc>")
 keymap.set("i", "<C-M-k>", vim.lsp.buf.signature_help, { desc = "Signature Help" })
 
+-- block selection
 keymap.set("n", "vv", "<C-v>", opts)
 -- keymap.set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 -- keymap.set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
