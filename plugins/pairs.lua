@@ -1,13 +1,13 @@
 return {
 	{
 		"nvim-mini/mini.pairs",
-		enabled = false,
+		-- enabled = false,
 	},
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {},
-	},
+	-- {
+	-- 	"windwp/nvim-autopairs",
+	-- 	event = "InsertEnter",
+	-- 	opts = {},
+	-- },
 
 	{
 		"andymass/vim-matchup",

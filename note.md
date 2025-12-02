@@ -127,3 +127,6 @@ deactivate
 21. clangd + .hpp.in
 1. .hpp.in cmake configured defined macros will be installed by cmake under build folder
 2. include xxx.hpp.in as <xxx.hpp> auto resolved by clanged
+3. clangd need debug symbol for built binary, use file BINARY_NAME check it out, and enable the debug symbol build\
+via -DCMAKE_BUILD_TYPE=Debug 
+

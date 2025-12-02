@@ -26,6 +26,15 @@ keymap.set("n", "vv", "<C-v>", opts)
 -- inc-rename
 keymap.set("n", "<leader>cr", ":IncRename ")
 
+-- Increment/decrement
+-- n: normal mode
+keymap.set("n", "<kPlus>", function()
+	require("dial.map").manipulate("increment", "normal")
+end)
+keymap.set("n", "<kMinus>", function()
+	require("dial.map").manipulate("decrement", "normal")
+end)
+
 -- Select all bad idea
 -- keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -150,7 +159,10 @@ local function toggle_capslock()
 			callback = highlight_current_line,
 		})
 	else
-		vim.api.nvim_clear_autocmds({ group = "CapsLockHighlight" })
+		local ok, _ = pcall(vim.api.nvim_get_autocmds, { group = "CapsLockHighlight" })
+		if ok then
+			vim.api.nvim_clear_autocmds({ group = "CapsLockHighlight" })
+		end
 		vim.api.nvim_buf_clear_namespace(0, capslock_ns, 0, -1)
 	end
 end
