@@ -1,127 +1,136 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode",
-            "keys": "ctrl+f11"
-        }
-    ],
-    "alwaysShowTabs": true,
-    "centerOnLaunch": true,
-    "copyFormatting": "none",
-    "copyOnSelect": false,
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-    "firstWindowPreference": "persistedWindowLayout",
-    "initialCols": 170,
-    "initialRows": 50,
-    "launchMode": "default",
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles": 
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
     {
-        "defaults": 
-        {
-            "adjustIndistinguishableColors": "never",
-            "colorScheme": "Color Scheme 11",
-            "font": 
-            {
-                "face": "0xProto Nerd Font Mono",
-                "size": 12,
-                "weight": "medium"
-            },
-            "intenseTextStyle": "bright",
-            "opacity": 89,
-            "padding": "1",
-            "scrollbarState": "hidden",
-            "useAcrylic": false
-        },
-        "list": 
-        [
-            {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
-            },
-            {
-                "commandline": "C:\\Windows\\system32\\wsl.exe -d Ubuntu",
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-            }
-        ]
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.644BA8F2"
     },
-    "schemes": 
-    [
-        {
-            "background": "#0C0E14",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#C0CAF5",
-            "cyan": "#3A96DD",
-            "foreground": "#C0CAF5",
-            "green": "#13A10E",
-            "name": "Color Scheme 11",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
-        }
-    ],
-    "showTabsInTitlebar": true,
-    "startOnUserLogin": true,
-    "theme": "system",
-    "themes": []
+    {
+      "command": "paste",
+      "id": "User.paste"
+    },
+    {
+      "command": "toggleFocusMode",
+      "id": "User.toggleFocusMode"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "id": "User.splitPane.A6751878"
+    },
+    {
+      "command": "find",
+      "id": "User.find"
+    }
+  ],
+  "alwaysShowTabs": true,
+  "centerOnLaunch": true,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{b77f27f0-2e00-4586-aac9-dce0f0f5ae28}",
+  "firstWindowPreference": "persistedWindowLayout",
+  "initialCols": 170,
+  "initialRows": 50,
+  "keybindings": [
+    {
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": "User.find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "id": "User.paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    },
+    {
+      "id": "User.toggleFocusMode",
+      "keys": "ctrl+f11"
+    }
+  ],
+  "launchMode": "default",
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "adjustIndistinguishableColors": "never",
+      "colorScheme": "Color Scheme 11",
+      "font": {
+        "face": "0xProto Nerd Font Mono",
+        "size": 12,
+        "weight": "medium"
+      },
+      "intenseTextStyle": "bright",
+      "opacity": 89,
+      "padding": "1",
+      "scrollbarState": "hidden",
+      "useAcrylic": false
+    },
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "adjustIndistinguishableColors": "indexed",
+        "commandline": "C:\\Windows\\system32\\wsl.exe -d Ubuntu",
+        "guid": "{b77f27f0-2e00-4586-aac9-dce0f0f5ae28}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "startingDirectory": "~"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#0C0E14",
+      "black": "#0C0C0C",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#3B78FF",
+      "brightCyan": "#61D6D6",
+      "brightGreen": "#16C60C",
+      "brightPurple": "#B4009E",
+      "brightRed": "#E74856",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#F9F1A5",
+      "cursorColor": "#C0CAF5",
+      "cyan": "#3A96DD",
+      "foreground": "#C0CAF5",
+      "green": "#13A10E",
+      "name": "Color Scheme 11",
+      "purple": "#881798",
+      "red": "#C50F1F",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#C19C00"
+    }
+  ],
+  "showTabsInTitlebar": true,
+  "startOnUserLogin": true,
+  "theme": "system",
+  "themes": []
 }
