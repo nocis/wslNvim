@@ -44,6 +44,18 @@ return {
 					fg = "#facb39",
 					bold = true,
 				}
+				highlights.LspReferenceRead = {
+					bg = "#3b4a78",
+					underline = true,
+				}
+				highlights.LspReferenceText = {
+					bg = "#3b4a78",
+					underline = true,
+				}
+				highlights.LspReferenceWrite = {
+					bg = "#3b4a78",
+					underline = true,
+				}
 			end,
 		},
 	},
@@ -79,6 +91,7 @@ return {
 -- #a9b1d6
 -- #c0caf5
 -- #ff9e64
+-- #3b4261
 
 -- lazygit default border will send gocui.ColorDefault by default
 --
