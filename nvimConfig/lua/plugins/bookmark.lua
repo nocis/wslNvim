@@ -21,7 +21,7 @@ return {
 			{
 				"<leader><Tab>l",
 				function()
-					require("bookmarks").bookmark_list()
+					require("telescope").extensions.bookmarks.list()
 				end,
 				desc = "List marks",
 			},
