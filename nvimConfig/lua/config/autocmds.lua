@@ -71,13 +71,17 @@ vim.api.nvim_create_autocmd("BufWritePost", { -- Use BufWritePost instead of Buf
 					end
 				end
 			end,
-			on_exit = function(_, exit_code)
-				cmake_job_id = nil
-				if exit_code == 0 then
-					vim.notify("✓ CMake build successful", vim.log.levels.INFO)
-				else
-					vim.notify("✗ CMake build failed (exit code: " .. exit_code .. ")", vim.log.levels.ERROR)
+			on_exit = function(job_id, exit_code)
+				-- Only show notification if this is still the current job
+				if job_id == cmake_job_id then
+					cmake_job_id = nil
+					if exit_code == 0 then
+						vim.notify("✓ CMake build successful", vim.log.levels.INFO)
+					else
+						vim.notify("✗ CMake build failed (exit code: " .. exit_code .. ")", vim.log.levels.ERROR)
+					end
 				end
+				-- If job_id != cmake_job_id, this job was canceled, so don't show anything
 			end,
 			stdout_buffered = true,
 			stderr_buffered = true,
