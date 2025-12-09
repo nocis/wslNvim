@@ -39,6 +39,16 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Automatically remove carriage returns
+-- remove (Windows line endings) before saving
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function()
+		vim.cmd([[silent! %s/\r//g]])
+	end,
+	desc = "Remove ^M (CR) characters before saving",
+})
+
 -- Run cmake on CMakeLists.txt save
 local cmake_job_id = nil
 
