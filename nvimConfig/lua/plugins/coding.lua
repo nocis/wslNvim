@@ -106,18 +106,6 @@ return {
 					mode = { "n" },
 					desc = "nabla popup",
 				},
-				{
-					"<leader>py",
-					function()
-						if LazyVim.pick.picker.name == "telescope" then
-							require("telescope").extensions.yank_history.yank_history({})
-						else
-							vim.cmd([[YankyRingHistory]])
-						end
-					end,
-					mode = { "n", "x" },
-					desc = "Open Yank History",
-				},
 				{ "<leader>K", function() end, desc = "unused" },
 				{ "<leader>L", function() end, desc = "unused" },
 				{ "<leader><Tab>]", function() end, desc = "unused" },

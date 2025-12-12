@@ -41,8 +41,10 @@ keymap.set("n", "<leader>cr", ":IncRename ")
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
-keymap.set("x", "p", "P")
-keymap.set("x", "P", "p")
+keymap.set("n", "c", '"_c')
+keymap.set("n", "C", '"_C')
+
+keymap.set("x", "c", '"_c')
 
 -- keymap.set("n", "<C-m>", "<C-i>", opts)
 vim.keymap.set("n", "<leader>j", function()
