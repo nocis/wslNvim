@@ -91,6 +91,8 @@ return {
 		optional = true,
 		opts = {
 			spec = {
+				{ "<leader>;", group = "+telescope" },
+				{ "<leader><Tab>", group = "+bookmarks" },
 				{ "<leader>p", group = "Pop up" },
 				{
 					"<leader>pc",

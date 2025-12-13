@@ -51,10 +51,6 @@ vim.keymap.set("n", "<leader>j", function()
 	require("whatthejump").browse_jumps()
 end, { desc = "show jumps" })
 
--- Split window
-keymap.set("n", "ss", ":vsplit<Return>", opts)
-keymap.set("n", "sv", ":split<Return>", opts)
-
 -- Ctrl+D = Backspace in insert mode
 keymap.set("i", "<C-d>", "<BS>", { desc = "Delete previous char" })
 

@@ -1,9 +1,8 @@
 return {
 	{
 		"tomasky/bookmarks.nvim",
-		event = "FileType",
+		lazy = true,
 		keys = {
-			{ "<leader><Tab>", "", desc = "+bookmarks" },
 			{
 				"<leader><Tab><Tab>",
 				function()
