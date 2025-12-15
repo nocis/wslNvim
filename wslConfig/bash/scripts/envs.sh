@@ -10,6 +10,7 @@ export PATH="$PATH:/opt/magick/"
 export PATH="$PATH:/opt/lazygit/"
 export PATH="$PATH:/opt/lazydocker/"
 export PATH="$PATH:/opt/yazi/"
+export PATH="$PATH:~/.local/bin/"
 # lazygit lazydocker yazi all these three dont respect starship color
 
 export COLORTERM=truecolor
