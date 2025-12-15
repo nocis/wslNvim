@@ -26,6 +26,11 @@ purgenvim() {
     rm -rf ~/.local/state/nvim/ ~/.config/nvim/ ~/.local/share/nvim/ ~/.cache/nvim
 }
 
+purgeswp() {
+    rm ~/.local/state/nvim/swap/*.swp
+    rm ~/.local/state/nvim/swap/*.swo
+}
+
 confignvim() {
     rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins ~/.config/nvim/snippets
     ln -s ~/.config/wslNvim/{config,plugins} ~/.config/nvim/lua/
