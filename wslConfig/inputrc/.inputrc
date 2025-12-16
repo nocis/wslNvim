@@ -1,0 +1,22 @@
+# this is where the magic happens
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-cmd-mode-string \1\e[2 q\2
+set vi-ins-mode-string \1\e[5 q\2
+set keyseq-timeout 150
+
+# bash is a nice place to mix and match vim and emacs, to find your personal style
+$if mode=vi
+    # bind substring history commands to j and k on vi's command mode
+    set keymap vi-command
+    # need to put a space after the partial substring(start till the cursor)
+    # becasue Vi Mode Cursor Shift.
+    # When you press Esc to go to Command Mode, the cursor moves back one character
+    "k": history-substring-search-backward
+    "j": history-substring-search-forward
+
+    # I can't live without C-l to clear the screen
+    set keymap vi-insert
+    "\C-l": clear-screen
+    "jk": vi-movement-mode
+$endif

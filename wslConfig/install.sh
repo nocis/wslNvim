@@ -34,6 +34,9 @@ YAZI_TARGET="$HOME/.config"
 PWNDBG_SOURCE="$DOTFILES_DIR/pwndbg/.gdbinit"
 PWNDBG_TARGET="$HOME/.gdbinit"
 
+INPUTRC_SOURCE="$DOTFILES_DIR/inputrc/.inputrc"
+INPUTRC_TARGET="$HOME/.inputrc"
+
 echo "🔗 Linking Yazi configuration..."
 
 # Check if source exists
@@ -50,10 +53,18 @@ echo "🔗 Linking pwdgdb configuration..."
 
 # Check if source exists
 if [ -f "$PWNDBG_SOURCE" ]; then
-    # Ensure ~/.config exists
-    mkdir -p "$HOME/.config"
     ln -sf "$PWNDBG_SOURCE" "$PWNDBG_TARGET"
     echo "✅ Linked $PWNDBG_SOURCE -> $PWNDBG_TARGET"
+else
+    echo "⚠️  Warning: Source $PWNDBG_SOURCE does not exist. Skipping link."
+fi
+
+echo "🔗 Linking .inputrc configuration..."
+
+# Check if source exists
+if [ -f "$INPUTRC_SOURCE" ]; then
+    ln -sf "$INPUTRC_SOURCE" "$INPUTRC_TARGET"
+    echo "✅ Linked $INPUTRC_SOURCE -> $INPUTRC_TARGET"
 else
     echo "⚠️  Warning: Source $PWNDBG_SOURCE does not exist. Skipping link."
 fi
