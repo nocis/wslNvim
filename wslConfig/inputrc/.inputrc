@@ -17,6 +17,9 @@ $if mode=vi
 
     # I can't live without C-l to clear the screen
     set keymap vi-insert
-    "\C-l": clear-screen
     "jk": vi-movement-mode
+    "\C-h": backward-char
+    "\C-l": forward-char
+    "\C-d": backward-delete-char
+    "\C-e": vi-movement-mode
 $endif
