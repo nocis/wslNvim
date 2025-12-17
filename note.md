@@ -30,13 +30,22 @@ libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
 libglfw3-dev libglew-dev libglm-dev libgl1-mesa-dev libglu1-mesa-dev xorg-dev cmake\
 
-
 pyenv install xx
 
 7. apps and configs
-nvim
-hyper
-starship
+
+- binary install:
+
+    nvim
+    hyper - build manually
+    starship
+    lazygit
+    lazydocker
+    yazi
+    pwndbg - curl -qsL 'https://install.pwndbg.re' | sh -s -- -u(non-root) -t pwndbg-gdb
+
+- apt install
+    tmux
 
 
 9. deps
