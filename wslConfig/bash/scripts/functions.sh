@@ -5,7 +5,7 @@
 # -------------------------------------
 
 project() {
-    pjlist=$(find ~ -name '.*' -prune -name '.git' -printf "%h\n" | fzf --height=10%)
+    pjlist=$(find ~/Projects/ -name '.*' -prune -name '.git' -printf "%h\n" | fzf --height=10%)
     echo $pjlist
     cd $pjlist
 }
@@ -52,5 +52,20 @@ function yp() {
     if [ -f "$tmp" ]; then
         cat "$tmp"
         rm -f "$tmp"
+    fi
+}
+
+nvim() {
+    # If we are inside tmux...
+    if [ -n "$TMUX" ]; then
+        # Turn status off
+        tmux set status off
+        # Run actual neovim, passing all arguments ("$@")
+        command nvim "$@"
+        # When neovim closes, turn status back on
+        tmux set status on
+    else
+        # Not in tmux? Just run nvim normally
+        command nvim "$@"
     fi
 }
