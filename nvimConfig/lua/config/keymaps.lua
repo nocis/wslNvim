@@ -4,6 +4,14 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+keymap.set("n", "<leader>w<tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
+keymap.set("n", "<leader>w<tab>o", "<cmd>tabonly<cr>", { desc = "Close Other Tabs" })
+keymap.set("n", "<leader>w<tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
+keymap.set("n", "<leader>w<tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
+keymap.set("n", "<leader>w<tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+keymap.set("n", "<leader>w<tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+keymap.set("n", "<leader>w<tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
 keymap.set("i", "<C-k>", "<Up>", { noremap = true, desc = "up" })
 keymap.set("i", "<C-j>", "<Down>", { desc = "down" })
 keymap.set("i", "<C-h>", "<Left>", { desc = "left" })

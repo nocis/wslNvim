@@ -93,6 +93,7 @@ return {
 			spec = {
 				{ "<leader>;", group = "+telescope" },
 				{ "<leader><Tab>", group = "+bookmarks" },
+				{ "<leader>w<Tab>", group = "+Tabs" },
 				{ "<leader>p", group = "Pop up" },
 				{
 					"<leader>pc",
