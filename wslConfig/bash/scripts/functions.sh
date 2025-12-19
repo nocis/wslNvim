@@ -54,18 +54,3 @@ function yp() {
         rm -f "$tmp"
     fi
 }
-
-nvim() {
-    # If we are inside tmux...
-    if [ -n "$TMUX" ]; then
-        # Turn status off
-        tmux set status off
-        # Run actual neovim, passing all arguments ("$@")
-        command nvim "$@"
-        # When neovim closes, turn status back on
-        tmux set status on
-    else
-        # Not in tmux? Just run nvim normally
-        command nvim "$@"
-    fi
-}
