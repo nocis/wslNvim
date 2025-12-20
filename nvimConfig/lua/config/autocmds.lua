@@ -49,56 +49,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	desc = "Remove ^M (CR) characters before saving",
 })
 
--- Run cmake on CMakeLists.txt save
-local cmake_job_id = nil
-
-vim.api.nvim_create_autocmd("BufWritePost", { -- Use BufWritePost instead of BufWritePre
-	group = vim.api.nvim_create_augroup("cmaketools", { clear = true }),
-	pattern = "CMakeLists.txt",
-	callback = function()
-		-- Cancel previous job if still running
-		if cmake_job_id then
-			vim.fn.jobstop(cmake_job_id)
-		end
-
-		vim.notify("Running cmake build...", vim.log.levels.INFO)
-
-		-- Run asynchronously with jobstart
-		cmake_job_id = vim.fn.jobstart({ "bash", "build.sh" }, {
-			on_stdout = function(_, data)
-				if data then
-					local output = table.concat(data, "\n")
-					if output ~= "" then
-						print(output)
-					end
-				end
-			end,
-			on_stderr = function(_, data)
-				if data then
-					local output = table.concat(data, "\n")
-					if output ~= "" then
-						vim.notify(output, vim.log.levels.WARN)
-					end
-				end
-			end,
-			on_exit = function(job_id, exit_code)
-				-- Only show notification if this is still the current job
-				if job_id == cmake_job_id then
-					cmake_job_id = nil
-					if exit_code == 0 then
-						vim.notify("✓ CMake build successful", vim.log.levels.INFO)
-					else
-						vim.notify("✗ CMake build failed (exit code: " .. exit_code .. ")", vim.log.levels.ERROR)
-					end
-				end
-				-- If job_id != cmake_job_id, this job was canceled, so don't show anything
-			end,
-			stdout_buffered = true,
-			stderr_buffered = true,
-		})
-	end,
-})
-
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	-- pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact",
 
