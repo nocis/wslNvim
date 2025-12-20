@@ -56,6 +56,9 @@ return {
 					bg = "#3b4a78",
 					underline = true,
 				}
+				highlights.Visual = {
+					bg = "#394785",
+				}
 			end,
 		},
 	},
@@ -92,6 +95,8 @@ return {
 -- #c0caf5
 -- #ff9e64
 -- #3b4261
+-- #364A82
+-- #1f2335
 
 -- lazygit default border will send gocui.ColorDefault by default
 --
