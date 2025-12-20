@@ -35,6 +35,11 @@ keymap.set("n", "vv", "<C-v>", opts)
 -- inc-rename
 keymap.set("n", "<leader>cr", ":IncRename ")
 
+-- matchup
+-- type fast will trigger this
+-- type slow till trigger which-key
+keymap.set("n", "<leader><Tab>", "%", { remap = true, desc = "Jump to matching pair" })
+
 -- Increment/decrement
 -- n: normal mode
 -- keymap.set("n", "<kPlus>", function()

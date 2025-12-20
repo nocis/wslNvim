@@ -4,21 +4,21 @@ return {
 		lazy = true,
 		keys = {
 			{
-				"<leader><Tab><Tab>",
+				"<leader>ma",
 				function()
 					require("bookmarks").bookmark_toggle()
 				end,
 				desc = "Toggle mark",
 			},
 			{
-				"<leader><Tab>e",
+				"<leader>me",
 				function()
 					require("bookmarks").bookmark_ann()
 				end,
 				desc = "Edit mark",
 			},
 			{
-				"<leader><Tab>l",
+				"<leader>ml",
 				function()
 					require("telescope").extensions.bookmarks.list()
 				end,
