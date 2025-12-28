@@ -139,3 +139,17 @@ deactivate
 3. clangd need debug symbol for built binary, use file BINARY_NAME check it out, and enable the debug symbol build\
 via -DCMAKE_BUILD_TYPE=Debug 
 
+
+22. python env management
+
+    1. python version - pyenv install, pyenv versions, pyenv local/global version, -> ~/.pyenv
+    2. local venv - python -m venv .venv -> ./.venv -> source .venv/bin/activate -> deactivate
+    3. project pkg management + venv, uv run python_file_path
+    4. check python path before pip install, which pip/python, where pip/python
+    5. uv cache on ~/.cache, use uv sync will install all pkg in local .venv
+    6. LSP like basedpyright see pyproject.toml as project root
+       and it search .venv for default deps import path
+       default venv name and path can be modified this way:
+       1. \[tool.basedpyright\] venvPath = "." venv = ".venv-child"
+       2. It doesn't matter that you ran source ../.venv/bin/activate with deps installed venv in your terminal.
+
