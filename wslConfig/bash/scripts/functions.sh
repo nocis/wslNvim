@@ -33,8 +33,8 @@ purgeswp() {
 
 confignvim() {
     rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins ~/.config/nvim/snippets
-    ln -s ~/.config/wslNvim/{config,plugins} ~/.config/nvim/lua/
-    ln -s ~/.config/wslNvim/snippets ~/.config/nvim/
+    ln -s ~/.config/wslNvim/nvimConfig/lua/{config,plugins} ~/.config/nvim/lua/
+    ln -s ~/.config/wslNvim/nvimConfig/snippets ~/.config/nvim/
 }
 
 function y() {
