@@ -9,7 +9,7 @@
   "editor.minimap.enabled": false,
 
   "window.newWindowDimensions": "inherit",
-  
+
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.fullScreen": false,
@@ -29,7 +29,6 @@
 
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
-
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -116,7 +115,6 @@
   //             You can also use ctrl + n and ctrl + p to move through
   //             the list and hit enter to choose the action to perform.
 
-  
   // 2. Windows (PowerShell) extensions workflow：
   //             Machine A:
   //             In the Visual Studio Code PowerShell terminal:
@@ -141,3 +139,5 @@
   //             close file: ctrl+w, q
 }
 
+// 5. ipynb workflow
+//            search across cell: ctrl-f, enter(next), S-enter(prev)
