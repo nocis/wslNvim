@@ -13,8 +13,8 @@ vim.opt.conceallevel = 0
 vim.g.snacks_animate = false
 
 vim.o.expandtab = true -- "Use softtabstop spaces instead of tab characters for indentation
-vim.o.shiftwidth = 4 -- "Indent by 4 spaces when using >>, <<, == etc.
-vim.o.softtabstop = 4 -- "Indent by 4 spaces when pressing <TAB>
+vim.o.shiftwidth = 2 -- "Indent by 4 spaces when using >>, <<, == etc.
+vim.o.softtabstop = 2 -- "Indent by 4 spaces when pressing <TAB>
 
 vim.opt.smartindent = false
 vim.opt.autoindent = true
