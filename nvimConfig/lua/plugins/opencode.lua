@@ -9,7 +9,7 @@ return {
 		end,
 		keys = {
 			{
-				"<C-a>",
+				"<leader>oa",
 				function()
 					require("opencode").ask("@this: ")
 				end,
@@ -17,7 +17,7 @@ return {
 				desc = "Ask OpenCode…",
 			},
 			{
-				"<C-x>",
+				"<leader>oo",
 				function()
 					require("opencode").select()
 				end,
@@ -25,7 +25,7 @@ return {
 				desc = "Select OpenCode…",
 			},
 			{
-				"go",
+				"<leader>op",
 				function()
 					return require("opencode").operator("@this ")
 				end,
@@ -34,7 +34,7 @@ return {
 				expr = true,
 			},
 			{
-				"goo",
+				"<leader>opp",
 				function()
 					return require("opencode").operator("@this ") .. "_"
 				end,

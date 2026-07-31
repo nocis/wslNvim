@@ -94,7 +94,8 @@ return {
 				{ "<leader>;", group = "+telescope" },
 				{ "<leader>m", group = "+bookmarks" },
 				{ "<leader>w<Tab>", group = "+Tabs" },
-				{ "<leader>p", group = "Pop up" },
+				{ "<leader>p", group = "+Pop up" },
+				{ "<leader>o", group = "+opencode" },
 				{
 					"<leader>pc",
 					vim.cmd.CccPick,
