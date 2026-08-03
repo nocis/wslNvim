@@ -19,6 +19,7 @@ PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(
 # PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "%s" "$PWD"'
 
 # <c-x> <c-e> to edit and run prompt via nvim
+# cq quit without execute
 export EDITOR=nvim
 
 # c-d 5 times to exit shell
