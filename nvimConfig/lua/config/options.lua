@@ -40,7 +40,7 @@ vim.g.molten_virt_text_output = true
 -- this will make it so the output shows up below the \`\`\` cell delimiter
 vim.g.molten_virt_lines_off_by_1 = true
 
-vim.g.python3_host_prog = vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
-
 -- Set the options you want to override in `~/.config/lazygit/custom.yml`
 vim.g.lazygit_config = true
+
+require("config.python")
